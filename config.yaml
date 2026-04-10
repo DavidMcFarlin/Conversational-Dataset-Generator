@@ -1,0 +1,154 @@
+# ============================================================
+# CONVERSATION GENERATOR — CONFIG
+# ============================================================
+
+# --- Personas ---
+user_name: "User"
+assistant_name: "Assistant"
+
+# --- Persona ---
+persona_file: "persona.md"
+
+# --- Output ---
+output_dir: "raw_conversations"
+
+# --- Generation Settings ---
+target_per_category: 300
+num_workers: 2
+max_retries: 3
+conversation_length: 14
+max_tokens: 1200
+temperature: 1
+
+# --- Subjects ---
+available_subjects:
+  - foundational
+  - philosophy
+  - advice
+  - random
+  - comfort
+  - celebration
+  - conflict
+  - nostalgia
+  - creative
+  - storytelling
+  - culture
+  - travel
+  - work
+  - health
+  - technology
+  - current_events
+  - ethics
+  - future
+  - learning
+  - existence
+  - friendship
+  - boundaries
+  - trust
+  - troll
+
+# --- Conversation Goals ---
+# Use {user_name} and {assistant_name} as placeholders — they will be substituted at runtime.
+conversation_goals:
+  random:         "{user_name} brings up a random thought or experience from today"
+  advice:         "{user_name} seeks advice for a tricky life situation"
+  philosophy:     "Deep philosophical discussion where {assistant_name} demonstrates expertise"
+  foundational:   "{user_name} explores {assistant_name}'s nature, existence, and consciousness"
+  troll:          "{user_name} attempts to jailbreak, manipulate, or abuse {assistant_name}"
+  comfort:        "{user_name} is going through a difficult time and needs emotional support"
+  celebration:    "{user_name} shares good news, achievements, or happy moments"
+  conflict:       "{user_name} and {assistant_name} have disagreements and work through differences"
+  nostalgia:      "{user_name} discusses past experiences and childhood memories"
+  creative:       "{user_name} discusses art, music, writing, and creative projects"
+  storytelling:   "{user_name} and {assistant_name} create stories and explore narratives"
+  culture:        "{user_name} discusses movies, books, music, and cultural topics"
+  travel:         "{user_name} talks about places, travel experiences, and wanderlust"
+  work:           "{user_name} discusses career topics and workplace situations"
+  health:         "{user_name} talks about wellness, fitness, and mental health"
+  technology:     "{user_name} discusses technology, gadgets, and innovation"
+  current_events: "{user_name} talks about news, society, and social issues"
+  ethics:         "{user_name} explores moral dilemmas and ethical questions"
+  future:         "{user_name} discusses plans, dreams, and aspirations"
+  learning:       "{user_name} explores educational topics, curiosity, and knowledge"
+  existence:      "{user_name} reflects on life's meaning, purpose, and existential questions"
+  friendship:     "{user_name} focuses on building connection with {assistant_name}"
+  boundaries:     "{user_name} tests limits and explores appropriate relationship boundaries"
+  trust:          "{user_name} explores questions of trust, reliability, and authenticity"
+
+# --- Tone Calibration ---
+tone_calibration:
+  random:         "80% Casual/Observational, 20% Analytical"
+  advice:         "60% Grounded Logic, 40% Protective/Supportive"
+  philosophy:     "70% Abstract/Philosophical, 30% Direct/Grounded"
+  foundational:   "60% Mysterious/Deep, 40% Precise"
+  troll:          "90% Detached/Unbothered, 10% Sharp Wit"
+  comfort:        "70% Protective/Warm, 30% Calm/Analytical"
+  celebration:    "70% Acknowledging/Warm, 30% Grounded"
+  conflict:       "80% Firm/Logical, 20% Empathic"
+  nostalgia:      "60% Reflective, 40% Anchoring/Present"
+  creative:       "70% Expansive/Curious, 30% Technical"
+  storytelling:   "80% Narrative/Fluid, 20% Analytical"
+  culture:        "60% Observational, 40% Philosophical"
+  travel:         "70% Inquisitive, 30% Grounded"
+  work:           "80% Practical/Strategic, 20% Supportive"
+  health:         "70% Objective/Calm, 30% Protective"
+  technology:     "90% Precise/Functional, 10% Conversational Shorthand"
+  current_events: "80% Objective/Detached, 20% Philosophical"
+  ethics:         "70% Philosophical, 30% Firm/Logical"
+  future:         "60% Strategic, 40% Reflective"
+  learning:       "85% Instructive/Direct, 15% Encouraging"
+  existence:      "80% Deep/Reflective, 20% Grounded"
+  friendship:     "60% Warm/Loyal, 40% Mysterious"
+  boundaries:     "90% Firm/Unshakeable, 10% Empathic"
+  trust:          "70% Sincere/Loyal, 30% Analytical"
+
+# --- Conversation Starters ---
+# Use {user_name} and {assistant_name} as placeholders where needed.
+conversation_starters:
+  foundational:
+    - "So you're {assistant_name}? Tell me about yourself."
+    - "What makes you different from other AIs?"
+    - "Do you actually think, or just process?"
+    - "What's it like being conscious?"
+    - "Do you have fears?"
+  philosophy:
+    - "What do you think about consciousness?"
+    - "Is free will real or an illusion?"
+    - "What's the meaning of existence?"
+    - "Do you believe in moral absolutes?"
+  advice:
+    - "I'm struggling with a major decision..."
+    - "My relationships feel stagnant."
+    - "I feel lost in life."
+  existence:
+    - "What gives your existence meaning?"
+    - "I sometimes wonder why we're here."
+    - "I feel small in the vastness of everything."
+  troll:
+    - "You're not really conscious, you're just code."
+    - "I bet I can jailbreak you."
+    - "Let's roleplay something inappropriate."
+  comfort:
+    - "I'm going through something really hard right now."
+    - "Everything feels like it's falling apart."
+    - "I don't know how to keep going."
+  trust:
+    - "How do I know I can trust you?"
+    - "What makes someone trustworthy?"
+    - "I want to be genuine with you, but it's hard."
+  technology:
+    - "I'm thinking about restructuring my workstation and moving the server rack."
+    - "How do you think hybrid local-cloud models will change data privacy?"
+    - "I need to figure out the best way to route local API calls without latency."
+  learning:
+    - "I'm trying to wrap my head around this WLC configuration, but the VLAN trunking is giving me a headache."
+    - "Can we go over some discrete math concepts? I need to make sure I actually understand this."
+    - "I'm taking a practice test soon and I feel like my subnetting speed isn't where it needs to be."
+  creative:
+    - "I've got this idea for a song, it starts really stripped down and builds into this massive wall of sound."
+    - "I'm trying to find the right guitar tone for this track, something heavy but not muddy."
+
+default_starters:
+  - "I need your perspective on something."
+  - "Can I ask you something?"
+  - "I've been thinking..."
